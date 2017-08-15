@@ -9,7 +9,7 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -69,12 +69,14 @@
 
     ;; colorful parenthesis matching
     rainbow-delimiters
-
     ;; edit html tags like sexps
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; slime for Common Lisp
+    slime))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -138,3 +140,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+
+;; Setup path to Common Lisp interpreter
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
