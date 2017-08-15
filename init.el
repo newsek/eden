@@ -11,11 +11,6 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
-
-
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
@@ -142,5 +137,5 @@
 (load "setup-js.el")
 
 
-;; Setup path to Common Lisp interpreter
+;; Setup path to Common Lisp compiler
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
